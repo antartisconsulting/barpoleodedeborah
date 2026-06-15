@@ -196,6 +196,124 @@ const init = () => {
         updateCartUI();
     };
 
+    const populatePickupTimes = () => {
+        const select = document.getElementById('order-time');
+        if (!select) return;
+
+        const previousValue = select.value;
+        select.innerHTML = '';
+
+        const now = new Date();
+        let currentHour = 0;
+        let currentMinute = 0;
+        let isSunday = false;
+
+        try {
+            const dayFormatter = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Madrid', weekday: 'short' });
+            const madridDay = dayFormatter.format(now);
+            isSunday = (madridDay === 'Sun');
+
+            const timeFormatter = new Intl.DateTimeFormat('en-US', { 
+                timeZone: 'Europe/Madrid', 
+                hour: 'numeric', 
+                minute: 'numeric', 
+                hour12: false 
+            });
+            const madridTimeStr = timeFormatter.format(now);
+            const [h, m] = madridTimeStr.split(':').map(Number);
+            currentHour = h;
+            currentMinute = m;
+        } catch (e) {
+            console.error('Error getting Madrid time for pickup selection:', e);
+            currentHour = now.getHours();
+            currentMinute = now.getMinutes();
+            isSunday = (now.getDay() === 0);
+        }
+
+        const startHour = 8;
+        const endHour = 22; // Closes at 23:00, last pick-up 22:45
+        
+        let hasAvailableSlots = false;
+        let defaultSelectedSet = false;
+
+        for (let h = startHour; h <= endHour; h++) {
+            for (let m = 0; m < 60; m += 15) {
+                const hourStr = h.toString().padStart(2, '0');
+                const minStr = m.toString().padStart(2, '0');
+                const timeStr = `${hourStr}:${minStr}`;
+
+                const opt = document.createElement('option');
+                opt.value = timeStr;
+                opt.textContent = `${timeStr} h`;
+
+                if (!isSunday) {
+                    const slotTotalMinutes = h * 60 + m;
+                    const currentTotalMinutes = currentHour * 60 + currentMinute;
+                    
+                    // Allow ordering only for slots at least 15 minutes in the future
+                    if (slotTotalMinutes < currentTotalMinutes + 15) {
+                        opt.disabled = true;
+                    } else {
+                        hasAvailableSlots = true;
+                        if (previousValue === timeStr) {
+                            opt.selected = true;
+                            defaultSelectedSet = true;
+                        } else if (!defaultSelectedSet && !previousValue) {
+                            if (h === 14 && m === 30) {
+                                opt.selected = true;
+                                defaultSelectedSet = true;
+                            }
+                        }
+                    }
+                } else {
+                    hasAvailableSlots = true;
+                    if (previousValue === timeStr) {
+                        opt.selected = true;
+                        defaultSelectedSet = true;
+                    } else if (!defaultSelectedSet && !previousValue) {
+                        if (h === 14 && m === 30) {
+                            opt.selected = true;
+                            defaultSelectedSet = true;
+                        }
+                    }
+                }
+
+                select.appendChild(opt);
+            }
+        }
+
+        if (!defaultSelectedSet && previousValue) {
+            const options = select.options;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value === previousValue && !options[i].disabled) {
+                    options[i].selected = true;
+                    defaultSelectedSet = true;
+                    break;
+                }
+            }
+        }
+
+        if (!defaultSelectedSet && hasAvailableSlots) {
+            const options = select.options;
+            for (let i = 0; i < options.length; i++) {
+                if (!options[i].disabled) {
+                    options[i].selected = true;
+                    defaultSelectedSet = true;
+                    break;
+                }
+            }
+        }
+
+        if (!hasAvailableSlots && !isSunday) {
+            const opt = document.createElement('option');
+            opt.value = '';
+            opt.textContent = 'Cerrado por hoy (horario de 08:00 a 23:00)';
+            opt.disabled = true;
+            opt.selected = true;
+            select.appendChild(opt);
+        }
+    };
+
     const updateCartUI = () => {
         cartItemsList.innerHTML = '';
         
@@ -253,6 +371,7 @@ const init = () => {
             cartBadgeCount.textContent = `${totalCount} ${totalCount === 1 ? 'plato' : 'platos'}`;
             if (floatingBasketCount) floatingBasketCount.textContent = totalCount;
             cartTotalPrice.textContent = `${totalPriceVal.toFixed(2).replace('.', ',')} €`;
+            populatePickupTimes();
         }
     };
 

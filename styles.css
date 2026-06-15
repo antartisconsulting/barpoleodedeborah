@@ -1057,16 +1057,17 @@ h2 {
     color: var(--text-muted);
 }
 
-.field-group input {
+.field-group input, .field-group select {
     padding: 10px 14px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-color);
     font-family: inherit;
     font-size: 0.9rem;
     background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
-.field-group input:focus {
+.field-group input:focus, .field-group select:focus {
     outline: none;
     border-color: var(--accent);
 }
