@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar El Poleo de Deborah | Tapas, Guisos Caseros y Desayunos en Rivas-Vaciamadrid</title>
+    <meta name="description" content="Disfruta de las mejores tapas caseras, croquetas de jamón, selectos guisos caseros y desayunos tradicionales en el Bar El Poleo de Deborah en Rivas-Vaciamadrid (Covibar).">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barpoleodeborah.es/">
+    <meta property="og:title" content="Bar El Poleo de Deborah | Tapas y Guisos en Rivas">
+    <meta property="og:description" content="Comida casera tradicional en Rivas-Vaciamadrid. Raciones abundantes, desayunos espectaculares y terraza al aire libre.">
+    <meta property="og:image" content="assets/real_exterior.jpg">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+    <!-- CABECERA Y NAVEGACIÓN -->
+    <header class="navbar-header" id="navbar-header">
+        <div class="container navbar-container">
+            <a href="#inicio" class="navbar-logo" aria-label="Volver al inicio">
+                <img src="assets/logo-optimized.png?v=2" alt="Bar El Poleo de Deborah" class="logo-img">
+            </a>
+            
+            <nav class="navbar-nav" id="navbar-nav">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#carta" class="nav-link">La Carta</a></li>
+                    <li><a href="#pedido" class="nav-link">Pedidos</a></li>
+                    <li><a href="#opiniones" class="nav-link">Opiniones</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="navbar-actions">
+                <div class="status-badge closed" id="status-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Cargando horario...</span>
+                </div>
+                
+                <a href="tel:+34910269580" class="btn-call" aria-label="Llamar al Bar">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>910 26 95 80</span>
+                </a>
+                
+                <button class="menu-toggler" id="menu-toggler" aria-label="Abrir menú de navegación">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- SECCIÓN HERO -->
+        <section id="inicio" class="hero-block">
+            <div class="hero-background-animated">
+                <svg viewBox="0 0 1200 600" class="neon-svg-bg" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="glow-rainbow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="8" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                        <filter id="glow-notes" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="4" result="blur" />
+                            <feMerge>
+                                <feMergeNode in="blur" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Glowing Wavy Rainbow Ribbon -->
+                    <g class="neon-rainbow" filter="url(#glow-rainbow)" fill="none" stroke-width="6" stroke-linecap="round">
+                        <!-- Red -->
+                        <path d="M -100 380 C 300 80, 600 480, 900 80 C 1000 -20, 1100 80, 1300 280" stroke="#FF3366" />
+                        <!-- Orange -->
+                        <path d="M -100 386 C 300 86, 600 486, 900 86 C 1000 -14, 1100 86, 1300 286" stroke="#FF6633" />
+                        <!-- Yellow -->
+                        <path d="M -100 392 C 300 92, 600 492, 900 92 C 1000 -8, 1100 92, 1300 292" stroke="#FFCC33" />
+                        <!-- Green -->
+                        <path d="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" stroke="#33CC66" />
+                        <!-- Blue -->
+                        <path d="M -100 404 C 300 104, 600 504, 900 104 C 1000 4, 1100 104, 1300 304" stroke="#3399FF" />
+                        <!-- Indigo -->
+                        <path d="M -100 410 C 300 110, 600 510, 900 110 C 1000 10, 1100 110, 1300 310" stroke="#6633FF" />
+                        <!-- Violet -->
+                        <path d="M -100 416 C 300 116, 600 516, 900 116 C 1000 16, 1100 116, 1300 316" stroke="#B033FF" />
+                    </g>
+                    
+                    <!-- Traveling Musical Notes -->
+                    <g class="traveling-notes" font-size="32" fill="#000000">
+                        <text class="svg-note">
+                            🎵
+                            <animateMotion dur="14s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            🎶
+                            <animateMotion dur="11s" begin="2s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♩
+                            <animateMotion dur="16s" begin="4s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♫
+                            <animateMotion dur="12s" begin="6s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♬
+                            <animateMotion dur="15s" begin="8s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♯
+                            <animateMotion dur="13s" begin="10s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♭
+                            <animateMotion dur="17s" begin="1s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                        <text class="svg-note">
+                            ♪
+                            <animateMotion dur="14s" begin="5s" repeatCount="indefinite" path="M -100 398 C 300 98, 600 498, 900 98 C 1000 -2, 1100 98, 1300 298" />
+                        </text>
+                    </g>
+                </svg>
+            </div>
+            <div class="hero-rainbow-glow"></div>
+            <div class="container hero-inner" style="position: relative; z-index: 1;">
+                <span class="hero-tagline">El Sabor de lo Casero en Covibar</span>
+                <h1 class="hero-heading">Comida casera con cariño en Rivas</h1>
+                <div class="hero-bar"></div>
+                <p class="hero-paragraph">Especialidad en desayunos tradicionales, raciones generosas para compartir en terraza y los mejores guisos diarios preparados con ingredientes frescos de toda la vida.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#carta" class="btn btn-main">Ver Carta Completa</a>
+                    <a href="#pedido" class="btn btn-alt">Hacer Pedido</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS / VALORES -->
+        <section class="highlights-block">
+            <div class="container highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-icon-wrapper">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Terraza Peatonal</h3>
+                    <p>Disfruta de tus tapas y cañas en nuestra tranquila terraza al aire libre en la Plaza de Pau Casals.</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon-wrapper">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3>Guisos Diarios</h3>
+                    <p>Cuchara tradicional elaborada a fuego lento. Lentejas, cocido madrileño, fabada y más.</p>
+                </div>
+                
+                <div class="highlight-item">
+                    <div class="highlight-icon-wrapper">
+                        <i class="fa-solid fa-people-roof"></i>
+                    </div>
+                    <h3>Ambiente Familiar</h3>
+                    <p>Un trato acogedor y cercano que te hará sentir como si estuvieras comiendo en casa de tu abuela.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section id="nosotros" class="about-block section-space">
+            <div class="container about-grid">
+                <div class="about-media">
+                    <div class="about-collage-container">
+                        <div class="collage-glow"></div>
+                        <div class="collage-card card-stew">
+                            <img src="assets/about_stew_pot.png" alt="Guiso casero tradicional en Bar Poleo" class="collage-img">
+                            <div class="collage-caption">Guisos diarios elaborados a fuego lento</div>
+                        </div>
+                        <div class="collage-card card-tapas">
+                            <img src="assets/about_tapas_beer.jpg" alt="Raciones y cañas en Bar Poleo" class="collage-img">
+                            <div class="collage-caption">Raciones y cañas en Bar Poleo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-info">
+                    <span class="section-tag">Bienvenido a nuestro rincón</span>
+                    <h2>Cercanía, tradición y raciones abundantes</h2>
+                    <p class="intro-text">El Bar El Poleo de Deborah es el punto de encuentro por excelencia en la Plaza de Pau Casals de Covibar (Rivas-Vaciamadrid).</p>
+                    <p>Nos esmeramos día a día por ofrecer comida casera honesta y abundante a precios populares. Ven a disfrutar de un espectacular desayuno con café italiano y tostadas de pan rústico, o visítanos a mediodía para degustar nuestros famosos guisos del día y raciones variadas preparadas por Deborah y su equipo.</p>
+                    
+                    <div class="feature-bullets">
+                        <div class="bullet-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Atención cercana y amable a cada cliente.</span>
+                        </div>
+                        <div class="bullet-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Especialistas en cocido madrileño, callos con garbanzos y cachopo.</span>
+                        </div>
+                        <div class="bullet-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Ambiente peatonal seguro e ideal para ir con niños.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="reasons-divider"></div>
+                
+                <div class="reasons-section">
+                    <div class="section-title text-center">
+                        <span class="section-tag">¿Por qué somos el rincón favorito de Covibar?</span>
+                        <h2>7 Razones para Visitarnos</h2>
+                        <p class="section-subtitle">Lo que hace que el Bar El Poleo de Deborah sea un lugar entrañable en Rivas, uniendo tradición y la mejor atención.</p>
+                    </div>
+                    
+                    <div class="reasons-grid">
+                        <div class="reason-card">
+                            <div class="reason-number">1</div>
+                            <div class="reason-content">
+                                <h3>El Café de la Mañana</h3>
+                                <p>Despierta con nuestro café italiano de tueste natural y nuestras tostadas crujientes de pan rústico con tomate natural rallado y aceite de oliva.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">2</div>
+                            <div class="reason-content">
+                                <h3>La Jugosa Tortilla</h3>
+                                <p>Elaborada cada mañana por Deborah con patatas seleccionadas, cebolla pochada en su punto y una textura increíblemente jugosa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">3</div>
+                            <div class="reason-content">
+                                <h3>Guisos de Cuchara</h3>
+                                <p>Cocido madrileño completo, fabada asturiana o lentejas caseras preparadas a fuego lento con ingredientes tradicionales.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">4</div>
+                            <div class="reason-content">
+                                <h3>Terraza Peatonal</h3>
+                                <p>Un espacio peatonal en la Plaza de Pau Casals, perfecto para tomar cañas al sol o tapear en familia con total seguridad.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">5</div>
+                            <div class="reason-content">
+                                <h3>Raciones de verdad</h3>
+                                <p>Nuestras raciones son generosas, abundantes y recién elaboradas. Disfruta de nuestras croquetas caseras o los chopitos tiernos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">6</div>
+                            <div class="reason-content">
+                                <h3>Trato Familiar</h3>
+                                <p>Un ambiente acogedor donde la cercanía, la simpatía y el buen servicio de Deborah y el equipo te harán sentir como en casa.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="reason-card">
+                            <div class="reason-number">7</div>
+                            <div class="reason-content">
+                                <h3>WhatsApp Assistant</h3>
+                                <p>Encarga tus platos favoritos desde nuestra carta digital y recógelos en el local sin esperas ni rodeos innecesarios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN LA CARTA DIGITAL -->
+        <section id="carta" class="menu-block section-space bg-cream">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-tag">Menú de la Casa</span>
+                    <h2>Nuestra Carta Digital</h2>
+                    <p class="section-subtitle">Explora nuestras especialidades caseras. Si deseas pedir comida para llevar y recoger en el local, añade los platos usando el botón "+ Añadir".</p>
+                </div>
+
+                <!-- Filtros de categoría -->
+                <div class="menu-tabs-wrapper">
+                    <button class="tab-btn active" data-category="todos">Todo</button>
+                    <button class="tab-btn" data-category="desayunos">Desayunos</button>
+                    <button class="tab-btn" data-category="raciones">Tapas y Raciones</button>
+                    <button class="tab-btn" data-category="guisos">Guisos y Platos</button>
+                    <button class="tab-btn" data-category="postres">Postres</button>
+                    <button class="tab-btn" data-category="bebidas">Bebidas</button>
+                </div>
+
+                <!-- Grid de productos -->
+                <div class="menu-grid" id="menu-grid">
+                    
+                    <!-- Desayunos -->
+                    <div class="menu-card" data-category="desayunos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Tostada con Tomate Natural</h3>
+                                <span class="price">2,20 €</span>
+                            </div>
+                            <p class="desc">Pan rústico tostado crujiente con tomate natural rallado y aceite de oliva virgen extra.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Gluten</span>
+                                <button class="btn-add" data-id="des-1" data-name="Tostada con Tomate" data-price="2.20">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desayunos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Tostada con Jamón y Tomate</h3>
+                                <span class="price">3,50 €</span>
+                            </div>
+                            <p class="desc">Tostada de pan rústico con tomate rallado, aceite de oliva virgen extra y lonchas de jamón serrano selecto.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Gluten</span>
+                                <button class="btn-add" data-id="des-2" data-name="Tostada con Jamón y Tomate" data-price="3.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desayunos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Pincho de Tortilla Casera</h3>
+                                <span class="price">2,80 €</span>
+                            </div>
+                            <p class="desc">Nuestra famosa y jugosa tortilla de patatas con cebolla elaborada diariamente.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Huevo</span>
+                                <button class="btn-add" data-id="des-3" data-name="Pincho de Tortilla" data-price="2.80">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Raciones -->
+                    <div class="menu-card" data-category="raciones">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Croquetas Caseras de Jamón</h3>
+                                <span class="price">9,50 €</span>
+                            </div>
+                            <p class="desc">Croquetas súper cremosas de jamón ibérico hechas en casa con bechamel tradicional (8 unidades).</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Lácteos / Gluten</span>
+                                <button class="btn-add" data-id="rac-1" data-name="Croquetas de Jamón" data-price="9.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="raciones">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Chopitos Fritos</h3>
+                                <span class="price">9,80 €</span>
+                            </div>
+                            <p class="desc">Chopitos de calamar tiernos fritos al estilo andaluz, servidos crujientes y con limón.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Pescado / Gluten</span>
+                                <button class="btn-add" data-id="rac-2" data-name="Chopitos Fritos" data-price="9.80">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="raciones">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Patatas Mixtas</h3>
+                                <span class="price">7,00 €</span>
+                            </div>
+                            <p class="desc">Patatas fritas caseras cortadas a mano acompañadas de salsa brava picante y alioli suave.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Huevo</span>
+                                <button class="btn-add" data-id="rac-3" data-name="Patatas Mixtas" data-price="7.00">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="raciones">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Sepia a la Plancha</h3>
+                                <span class="price">11,50 €</span>
+                            </div>
+                            <p class="desc">Sepia tierna a la plancha aderezada con nuestro majado casero de ajo, perejil y aceite de oliva virgen.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Moluscos</span>
+                                <button class="btn-add" data-id="rac-4" data-name="Sepia a la Plancha" data-price="11.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="raciones">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Calamares a la Romana</h3>
+                                <span class="price">10,00 €</span>
+                            </div>
+                            <p class="desc">Anillas de calamar fresco rebozadas y fritas, tiernas y en su punto justo.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Moluscos / Gluten</span>
+                                <button class="btn-add" data-id="rac-5" data-name="Calamares a la Romana" data-price="10.00">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guisos y Platos -->
+                    <div class="menu-card" data-category="guisos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Cocido Madrileño Completo</h3>
+                                <span class="price">12,50 €</span>
+                            </div>
+                            <p class="desc">Guisado lentamente con garbanzos castellanos selectos, verduras frescas, morcilla, chorizo, tocino y carnes de primera calidad.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Guiso tradicional</span>
+                                <button class="btn-add" data-id="gui-1" data-name="Cocido Madrileño" data-price="12.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="guisos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Callos con Garbanzos</h3>
+                                <span class="price">9,50 €</span>
+                            </div>
+                            <p class="desc">Callos a la madrileña cocinados a fuego lento con garbanzos, chorizo, morcilla y un toque picante tradicional.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Casero</span>
+                                <button class="btn-add" data-id="gui-2" data-name="Callos con Garbanzos" data-price="9.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="guisos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Cachopo de Pollo</h3>
+                                <span class="price">13,50 €</span>
+                            </div>
+                            <p class="desc">Filete de pollo empanado relleno de jamón serrano y abundante queso fundido, servido con patatas.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Gluten / Lácteos</span>
+                                <button class="btn-add" data-id="gui-3" data-name="Cachopo de Pollo" data-price="13.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="guisos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Arroz Meloso / Caldoso</h3>
+                                <span class="price">11,00 €</span>
+                            </div>
+                            <p class="desc">Arroz caldoso guisado con carne de pollo y conejo al estilo tradicional de la comarca.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Arroz casero</span>
+                                <button class="btn-add" data-id="gui-4" data-name="Arroz Meloso/Caldoso" data-price="11.00">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="guisos">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Fabada Asturiana / Judías Blancas</h3>
+                                <span class="price">9,00 €</span>
+                            </div>
+                            <p class="desc">Plato de cuchara tradicional elaborado lentamente con compango selecto (chorizo, morcilla y tocino).</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Plato del Día</span>
+                                <button class="btn-add" data-id="gui-5" data-name="Fabada / Judías" data-price="9.00">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Postres -->
+                    <div class="menu-card" data-category="postres">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Tarta de Queso Horneada</h3>
+                                <span class="price">4,50 €</span>
+                            </div>
+                            <p class="desc">Nuestra tarta de queso casera horneada con base de galleta y textura súper cremosa en el centro.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Lácteos / Huevo</span>
+                                <button class="btn-add" data-id="pos-1" data-name="Tarta de Queso Casera" data-price="4.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="postres">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Tarta de Mousse de Chocolate</h3>
+                                <span class="price">4,50 €</span>
+                            </div>
+                            <p class="desc">Esponjosa tarta fría de mousse de chocolate negro sobre base crujiente, decorada con virutas.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Lácteos</span>
+                                <button class="btn-add" data-id="pos-2" data-name="Tarta Mousse Chocolate" data-price="4.50">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="postres">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Pudin con Nata</h3>
+                                <span class="price">3,80 €</span>
+                            </div>
+                            <p class="desc">Pudin casero de pan y leche aderezado con caramelo líquido y abundante nata montada.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Huevo / Lácteos</span>
+                                <button class="btn-add" data-id="pos-3" data-name="Pudin con Nata" data-price="3.80">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bebidas -->
+                    <div class="menu-card" data-category="bebidas">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Caña de Cerveza Tirada</h3>
+                                <span class="price">1,80 €</span>
+                            </div>
+                            <p class="desc">Cerveza helada de barril servida en su punto óptimo con su espuma, incluye tapa del día.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Gluten</span>
+                                <button class="btn-add" data-id="beb-1" data-name="Caña de Cerveza" data-price="1.80">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="bebidas">
+                        <div class="menu-card-body">
+                            <div class="menu-card-header">
+                                <h3>Café Solo / Con Leche / Cortado</h3>
+                                <span class="price">1,40 €</span>
+                            </div>
+                            <p class="desc">Café de tueste natural italiano de aroma intenso, preparado a tu gusto.</p>
+                            <div class="menu-card-footer">
+                                <span class="allergen">Caliente</span>
+                                <button class="btn-add" data-id="beb-2" data-name="Café / Infusión" data-price="1.40">
+                                    <i class="fa-solid fa-plus"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ASISTENTE DE PEDIDO POR WHATSAPP -->
+        <section id="pedido" class="order-block section-space">
+            <div class="container order-grid">
+                <div class="order-text">
+                    <span class="section-tag">Servicio para recoger</span>
+                    <h2>Asistente de Pedidos por WhatsApp</h2>
+                    <p class="lead-text">¿Quieres comer en casa o en la oficina? Encarga tu pedido online de forma rápida.</p>
+                    <p>Agrega los platos que deseas de la carta digital de arriba, rellena tu nombre y la hora estimada de recogida, y haz clic en "Enviar Pedido". Se abrirá un chat de WhatsApp con tu pedido ya redactado y sumado.</p>
+                    
+                    <div class="order-steps-list">
+                        <div class="step-card">
+                            <div class="step-badge">1</div>
+                            <div class="step-info">
+                                <h4>Selecciona los platos</h4>
+                                <p>Haz clic en el botón "+ Añadir" en cualquiera de las especialidades de nuestra carta.</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-badge">2</div>
+                            <div class="step-info">
+                                <h4>Revisa e introduce tus datos</h4>
+                                <p>Revisa la lista en tu carrito de la derecha, escribe tu nombre y define la hora de recogida.</p>
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-badge">3</div>
+                            <div class="step-info">
+                                <h4>Confirma por chat</h4>
+                                <p>Envía el mensaje automático. Deborah o su equipo te confirmarán por el chat cuando esté en marcha.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Interactiva del Carrito -->
+                <div class="order-cart-card" id="order-cart-card">
+                    <div class="cart-title-row">
+                        <h3><i class="fa-solid fa-shopping-basket"></i> Tu Carrito</h3>
+                        <span class="cart-badge-count" id="cart-badge-count">0 platos</span>
+                    </div>
+
+                    <div class="cart-content" id="cart-content">
+                        <!-- Carrito Vacío -->
+                        <div class="cart-empty" id="cart-empty">
+                            <i class="fa-solid fa-box-open"></i>
+                            <p>Tu selección está vacía.</p>
+                            <a href="#carta" class="btn btn-inline-link">Explorar Carta</a>
+                        </div>
+                        
+                        <!-- Lista de productos agregados -->
+                        <ul class="cart-items" id="cart-items" style="display: none;">
+                            <!-- Insertado dinámicamente -->
+                        </ul>
+                    </div>
+
+                    <div class="cart-summary" id="cart-summary" style="display: none;">
+                        <div class="summary-line">
+                            <span>Subtotal Estimado:</span>
+                            <span class="total-price" id="total-price">0,00 €</span>
+                        </div>
+                        
+                        <div class="field-group">
+                            <label for="order-name">Tu nombre:</label>
+                            <input type="text" id="order-name" placeholder="Ej: Francisco Romero" required>
+                        </div>
+                        
+                        <div class="field-group">
+                            <label for="order-time">Hora de recogida estimada:</label>
+                            <input type="time" id="order-time" value="14:30" required>
+                        </div>
+
+                        <button class="btn btn-send-whatsapp" id="btn-send-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Enviar Pedido a Teléfono Fijo
+                        </button>
+                        <p class="order-disclaimer">*Los pedidos se preparan tras la confirmación de Deborah vía WhatsApp. Se abona en el establecimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE OPINIONES DE GOOGLE MAPS -->
+        <section id="opiniones" class="reviews-block section-space bg-cream">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-tag">Nuestros clientes hablan</span>
+                    <h2>Opiniones en Google Maps</h2>
+                    <div class="rating-box-summary">
+                        <span class="rating-number">4.4 / 5</span>
+                        <div class="stars-gold">★★★★★</div>
+                        <span class="opinions-number">Basado en 204 reseñas</span>
+                    </div>
+                </div>
+
+                <div class="slider-wrapper">
+                    <div class="slider-container" id="slider-container">
+                        
+                        <!-- Review 1 -->
+                        <div class="slider-slide active">
+                            <div class="slider-card">
+                                <div class="review-stars-row">★★★★★</div>
+                                <p class="review-comment">"Nos ha encantado todo, tanto la comida como la atención han sido un 10. Pedimos unas patatas mixtas, unos chopitos, unas croquetas de jamón y una sepia. Raciones súper generosas y riquísimas."</p>
+                                <div class="reviewer-meta">
+                                    <div class="meta-avatar"><i class="fa-solid fa-user-check"></i></div>
+                                    <div class="meta-details">
+                                        <h4>Ana G8</h4>
+                                        <span>Local Guide Rivas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="slider-slide">
+                            <div class="slider-card">
+                                <div class="review-stars-row">★★★★★</div>
+                                <p class="review-comment">"Bar de tapas y comidas tradicionales de la zona de Covibar en Rivas. Muy recomendable también para desayunos con tostada de tomate natural recién rallado. El trato de Deborah es ejemplar."</p>
+                                <div class="reviewer-meta">
+                                    <div class="meta-avatar"><i class="fa-solid fa-user-check"></i></div>
+                                    <div class="meta-details">
+                                        <h4>Antonio A.</h4>
+                                        <span>Reseña de Google Maps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="slider-slide">
+                            <div class="slider-card">
+                                <div class="review-stars-row">★★★★★</div>
+                                <p class="review-comment">"Bar de barrio, pero no os dejéis engañar, las raciones son de muy buena calidad y muy abundantes. El Cocido Madrileño y los callos con garbanzos son espectaculares. Calidad-precio insuperable."</p>
+                                <div class="reviewer-meta">
+                                    <div class="meta-avatar"><i class="fa-solid fa-user-check"></i></div>
+                                    <div class="meta-details">
+                                        <h4>Francisco Romero</h4>
+                                        <span>Opinión de Google Maps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Botones de Control -->
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-slide" id="prev-slide" aria-label="Opinión anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn next-slide" id="next-slide" aria-label="Opinión siguiente">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Indicadores Puntos -->
+                    <div class="slider-dots" id="slider-dots">
+                        <span class="dot-indicator active" data-slide-index="0"></span>
+                        <span class="dot-indicator" data-slide-index="1"></span>
+                        <span class="dot-indicator" data-slide-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CONTACTO, HORARIO Y LOCALIZACIÓN -->
+        <section id="contacto" class="contact-block section-space">
+            <div class="container contact-grid">
+                <div class="contact-info-panel">
+                    <span class="section-tag">¿Cómo venir?</span>
+                    <h2>Contacto y Localización</h2>
+                    <p class="intro">Te esperamos en la peatonal Plaza de Pau Casals de Covibar, en Rivas-Vaciamadrid. Ven a disfrutar de una buena cerveza o comida en un ambiente relajado.</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <div class="contact-icon"><i class="fa-solid fa-map-pin"></i></div>
+                            <div class="contact-details">
+                                <h4>Dirección</h4>
+                                <p>Plaza de Pau Casals, 4, 28523 Rivas-Vaciamadrid, Madrid (Junto a Calzados Jumar)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="fa-solid fa-phone-flip"></i></div>
+                            <div class="contact-details">
+                                <h4>Llámanos por Teléfono</h4>
+                                <p><a href="tel:+34910269580">910 26 95 80</a></p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="hours-card">
+                        <h3><i class="fa-solid fa-clock"></i> Horario de Apertura</h3>
+                        <table class="hours-table">
+                            <tbody>
+                                <tr>
+                                    <td>Lunes a Sábado</td>
+                                    <td>08:00 – 23:00 h</td>
+                                </tr>
+                                <tr>
+                                    <td>Domingos</td>
+                                    <td class="closed-label">Cerrado por descanso</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="hours-disclaimer">*La cocina del bar sirve comidas de 13:00 a 16:30 y cenas de 20:00 a 22:30.</p>
+                    </div>
+                </div>
+
+                <!-- Mapa y Caja Visual -->
+                <div class="contact-map-panel">
+                    <div class="map-top-bar">
+                        <h4>Localización en Covibar</h4>
+                        <a href="https://maps.google.com/?q=BAR+EL+POLEO+DE+DEBORAH+Rivas-Vaciamadrid" target="_blank" class="btn btn-map">
+                            <i class="fa-solid fa-location-arrow"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                    
+                    <div class="map-visual-box">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Bar%20El%20Poleo%20de%20Deborah,%20Plaza%20de%20Pau%20Casals,%204,%20Rivas-Vaciamadrid&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="map-iframe">
+                        </iframe>
+                        <div class="map-card-overlay">
+                            <i class="fa-solid fa-store"></i>
+                            <div>
+                                <h5>Bar El Poleo de Deborah</h5>
+                                <p>Plaza de Pau Casals, 4 (Covibar, Rivas)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER / PIE DE PÁGINA -->
+    <footer class="footer-block">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <div class="footer-logo-container">
+                    <img src="assets/logo-footer.png" alt="Bar El Poleo de Deborah" class="footer-logo-img">
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#carta">La Carta</a></li>
+                    <li><a href="#pedido">Asistente de Pedidos</a></li>
+                    <li><a href="#contacto">Contacto y Horario</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-address">
+                <h4>Dónde Encontrarnos</h4>
+                <p>Plaza de Pau Casals, 4<br>28523 Rivas-Vaciamadrid, Madrid</p>
+                <p class="phone-link">Tlf: <a href="tel:+34910269580">910 26 95 80</a></p>
+                <p class="extra-note">Pedidos a recoger por WhatsApp en teléfono fijo.</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            <div class="container copy-inner">
+                <p>&copy; 2026 Bar El Poleo de Deborah. Todos los derechos reservados.</p>
+                <p>Elaborado con cariño para el barrio de Covibar en Rivas-Vaciamadrid.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp para Acceso Rápido al Carrito -->
+    <a href="#pedido" class="floating-basket-btn" id="floating-basket-btn" style="display: none;" aria-label="Ver carrito de pedidos">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="floating-basket-count" id="floating-basket-count">0</span>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js?v=2"></script>
+</body>
+</html>

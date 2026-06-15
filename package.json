@@ -1,0 +1,14 @@
+{
+  "name": "bar-poleo-deborah",
+  "version": "1.0.0",
+  "description": "Sitio web oficial de Bar El Poleo de Deborah",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
